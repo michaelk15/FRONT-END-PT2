@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG ALEGRIA - Início</title>
+  <style>
+    /* ======== ESTILO GERAL ======== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #222;
+    }
+
+    /* ======== IMAGEM DE FUNDO ======== */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('cachorros-4.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      filter: brightness(1.4);
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    /* ======== CABEÇALHO ======== */
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* ======== CONTEÚDO ======== */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 50px 20px;
+    }
+
+    .conteudo {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .conteudo h2 {
+      color: #111;
+      border-bottom: 2px solid #333;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+
+    .conteudo p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #222;
+      margin-bottom: 25px;
+    }
+
+    
+    
+    
+/* ======== IMAGEM CENTRAL ACIMA DO RODAPÉ ======== */
+.imagem-centro {
+  position: relative;
+  width: 100%;
+  height: 250px; /* espaço reservado acima do rodapé */
+}
+
+.imagem-centro img {
+  position: absolute;
+  bottom: 20px; /* distância do rodapé */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.imagem-centro img:hover {
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+    /* ======== RODAPÉ ======== */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: auto;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    }
+  </style>
+  
+</head>
+
+<body>
+  <header>
+    <h1>ONG ALEGRIA</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="projeto.html">Projeto</a>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="conteudo">
+      <h2>Apresentação</h2>
+      <p>A Ong Alegria é uma organização sem fins lucrativos dedicada a ajudar cães em situação de rua, oferecendo cuidados, abrigo e buscando lares amorosos para eles.</p>
+
+    </div>
+  </main>
+</main>
+<!-- Imagem central acima do rodapé -->
+
+
+
+
+<style>/* ======== IMAGEM CENTRAL INFERIOR ======== */
+.imagem-fundo-centro {
+  position: relative;
+  width: 100%;
+  height: 200px; /* área reservada para a imagem acima do rodapé */
+}
+
+.imagem-fundo-centro img {
+  position: absolute;
+  bottom: 10px;         /* distância do rodapé */
+  left: 50%;            /* centraliza horizontalmente */
+  transform: translateX(-50%); /* garante que o centro fique alinhado */
+  width: 300px;         /* tamanho da imagem */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.imagem-fundo-centro img:hover {
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+</style>
+
+
+<!-- Imagens na parte inferior -->
+<div class="imagens-inferiores">
+  <img src="imagensdog1 (7).webp" alt="Cão feliz à esquerda" class="esquerda">
+  <img src="imagensdog2 (5).webp" alt="Cão feliz no centro" class="centro">
+  <img src="imagensdog3 (6).webp" alt="Cão feliz à direita" class="direita">
+</div>
+<style>/* ======== IMAGENS INFERIORES (ESQUERDA E CENTRO AJUSTADAS) ======== */
+.imagens-inferiores {
+  position: relative;
+  width: 100%;
+  height: 250px; /* altura da área reservada acima do rodapé */
+}
+
+/* estilo geral das imagens */
+.imagens-inferiores img {
+  position: absolute;
+  bottom: 10px;
+  width: 430px; /* ⬆️ aumentei o tamanho (antes era 280px) */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* efeito de hover apenas na esquerda */
+.imagens-inferiores .esquerda:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* a imagem central fica fixa */
+.imagens-inferiores .centro:hover {
+  transform: translateX(-50%) scale(1); /* sem zoom */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra fixa */
+}
+
+
+/* imagem da esquerda */
+.imagens-inferiores .esquerda {
+  left: 30px; /* afastada da borda esquerda */
+}
+
+/* imagem do centro */
+.imagens-inferiores .centro {
+  left: 50%; /* empurra a imagem mais para o centro */
+  transform: translateX(-50%);
+}
+
+.imagens-inferiores .direita {
+  right: 40px; /* distância da borda direita */
+}
+
+/* hover só na esquerda e direita */
+.imagens-inferiores .direita:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+</style>
+
+  <footer>
+    <p>Email: ongalegria@ong.com.br | Telefone: (62) 99999-9999 | Endereço: Rua do Mato, nº 201 - Goiânia, GO</p>
+    &copy; 2025 ONG ALEGRIA
+  </footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG ALEGRIA - Cadastro</title>
+
+  <style>
+    /* ======== ESTILO GERAL ======== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #222;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('cachorros-4.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      filter: brightness(1.4);
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 50px 20px;
+    }
+
+    .conteudo {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .conteudo h2 {
+      color: #111;
+      border-bottom: 2px solid #333;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+
+    form {
+      margin-bottom: 40px;
+    }
+
+    form input {
+      width: 90%;
+      max-width: 400px;
+      height: 40px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      padding: 8px 10px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      display: block;
+    }
+
+    form button {
+      width: 150px;
+      height: 45px;
+      background-color: #333;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: auto;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>ONG ALEGRIA</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="projeto.html">Projeto</a>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="conteudo">
+      <h2>Seja um Doador</h2>
+      <form>
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="tel" placeholder="Telefone" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+
+      <h2>Seja um Voluntário</h2>
+      <form>
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="tel" placeholder="Telefone" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>Email: ongalegria@ong.com.br | Telefone: (62) 99999-9999 | Endereço: Rua do Mato, nº 201 - Goiânia, GO</p>
+    &copy; 2025 ONG ALEGRIA
+  </footer>
+</body>
+</html>
+

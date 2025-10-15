@@ -1,0 +1,167 @@
+/* ======= ESTILO GERAL ======= */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../imagens/cachorros-4.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(1.3);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* ======= CABEÇALHO ======= */
+header {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #f5c518;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* ======= CONTEÚDO ======= */
+main {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.container h2 {
+  color: #333;
+  border-bottom: 2px solid #f5c518;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.container p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ======== IMAGENS ACIMA DO RODAPÉ ======== */
+/* ======== IMAGENS ACIMA DO RODAPÉ ======== */
+.imagens-baixo {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 40px; /* espaço entre as imagens */
+  margin: 40px auto 0 auto;
+  padding-right: 60px; /* espaço do lado direito */
+}
+
+.imagens-baixo img {
+  width: 260px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.imagens-baixo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* posicionamento */
+.imagens-baixo .centro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.imagens-baixo .direita {
+  position: relative;
+  right: 0;
+
+  
+}
+
+/* ======== IMAGENS INFERIORES (ESQUERDA E CENTRO AJUSTADAS) ======== */
+.imagens-inferiores {
+  position: relative;
+  width: 100%;
+  height: 250px; /* altura da área reservada acima do rodapé */
+}
+
+/* estilo geral das imagens */
+.imagens-inferiores img {
+  position: absolute;
+  bottom: 10px;
+  width: 280px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.imagens-inferiores img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* imagem da esquerda */
+.imagens-inferiores .esquerda {
+  left: 80px; /* afastada da borda esquerda */
+}
+
+/* imagem do centro */
+.imagens-inferiores .centro {
+  left: 55%; /* empurra a imagem mais para o centro */
+  transform: translateX(-50%);
+}
+
+

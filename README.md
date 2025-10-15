@@ -1,0 +1,1 @@
+Coloque o projeto no VS Code e abra index.html. A imagem cachorros-4.jpg está em imagens/ (se incluida).

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG ALEGRIA - Projeto</title>
+
+  <style>
+    /* ======== ESTILO GERAL ======== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #222;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('cachorros-4.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      filter: brightness(1.4);
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 50px 20px;
+    }
+
+    .conteudo {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .conteudo h2 {
+      color: #111;
+      border-bottom: 2px solid #333;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+
+    .conteudo p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #222;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: auto;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>ONG ALEGRIA</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="projeto.html">Projeto</a>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="conteudo">
+      <h2>Nosso Projeto</h2>
+      <p>A ONG Alegria desenvolve projetos voltados ao resgate, cuidado e adoção de cães em situação de rua, proporcionando um ambiente seguro e amoroso.</p>
+
+      <h2>Resgate e Acolhimento</h2>
+      <p>Realizamos o resgate de cães em situação de risco, oferecendo cuidados veterinários, alimentação adequada e um lar temporário até encontrarem uma família definitiva.</p>
+
+      <h2>Campanhas de Adoção</h2>
+      <p>Organizamos eventos e campanhas para promover a adoção dos cães sob nossos cuidados, buscando lares amorosos e responsáveis para cada um deles.</p>
+
+      <h2>Educação e Conscientização</h2>
+      <p>Desenvolvemos programas educativos para a comunidade, visando aumentar a conscientização sobre os direitos dos animais e a importância da adoção responsável.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Email: ongalegria@ong.com.br | Telefone: (62) 99999-9999 | Endereço: Rua do Mato, nº 201 - Goiânia, GO</p>
+    &copy; 2025 ONG ALEGRIA
+  </footer>
+</body>
+</html>
+
