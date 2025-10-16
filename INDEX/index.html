@@ -16,23 +16,33 @@
       color: #222;
     }
 
-    /* ======== IMAGEM DE FUNDO ======== */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('cachorros-4.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      filter: brightness(1.4);
-      opacity: 0.4;
-      z-index: -1;
-    }
+    
+   /* ======== IMAGEM DE FUNDO ======== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* imagem */
+  background-image: url('cachorros-4.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* efeito visual */
+  filter: brightness(0.6); /* escurece levemente */
+  opacity: 0.9; /* visível mas suave */
+  z-index: -1;
+}
+
+      
+      
+     
+    
 
     /* ======== CABEÇALHO ======== */
     header {
@@ -133,6 +143,45 @@
       margin-top: auto;
       box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
     }
+
+
+
+    /* ======== CABEÇALHO ======== */
+header {
+  background: rgba(0, 0, 0, 0.8); /* leve transparência escura */
+  color: #fff;
+  text-align: center; /* centraliza o conteúdo */
+  padding: 20px 0;
+  position: fixed; /* fixa no topo */
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #fff; /* título branco */
+}
+
+/* ======== MENU ======== */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff; /* letras brancas */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff914d; /* cor laranja no hover */
+}
+
   </style>
   
 </head>
@@ -154,7 +203,7 @@
 
     </div>
   </main>
-</main>
+
 <!-- Imagem central acima do rodapé -->
 
 
@@ -231,7 +280,7 @@
 
 /* imagem do centro */
 .imagens-inferiores .centro {
-  left: 50%; /* empurra a imagem mais para o centro */
+  left: 50%; /* imagem mais para o centro */
   transform: translateX(-50%);
 }
 
@@ -244,7 +293,32 @@
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+
+/* === ESTILO DO CONTEÚDO CENTRAL === */
+.conteudo {
+  background: rgba(255, 255, 255, 0.85); /* fundo branco translúcido */
+  border-radius: 15px;                   /* cantos arredondados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* sombra suave */
+  padding: 30px;                         /* espaço interno */
+  max-width: 800px;                      /* largura máxima */
+  margin: 80px auto;                     /* centraliza e dá espaço do topo */
+}
+
+/* Centraliza o texto dentro do bloco */
+.conteudo h2, .conteudo p {
+  text-align: center;
+}
+
+/* Deixa o título com mais destaque */
+.conteudo h2 {
+  font-size: 28px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
 </style>
+
 
   <footer>
     <p>Email: ongalegria@ong.com.br | Telefone: (62) 99999-9999 | Endereço: Rua do Mato, nº 201 - Goiânia, GO</p>

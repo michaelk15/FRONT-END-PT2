@@ -90,7 +90,7 @@ main {
   margin-bottom: 20px;
 }
 
-/* ======== IMAGENS ACIMA DO RODAPÉ ======== */
+
 /* ======== IMAGENS ACIMA DO RODAPÉ ======== */
 .imagens-baixo {
   position: relative;
@@ -160,7 +160,7 @@ main {
 
 /* imagem do centro */
 .imagens-inferiores .centro {
-  left: 55%; /* empurra a imagem mais para o centro */
+  left: 55%; /* empurra a imagem*/
   transform: translateX(-50%);
 }
 
