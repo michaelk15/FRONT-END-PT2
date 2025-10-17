@@ -9,114 +9,168 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ======== ESTILO GERAL ======== */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      color: #222;
-    }
+  /* === DESIGN SYSTEM (Tópico 1) === */
+  :root{
+    --cor-primaria:#ff914d;
+    --cor-primaria-escura:#cc743f;
+    --cor-secundaria:#f5c518;
+    --cor-header:rgba(0,0,0,0.85);
+    --cor-fundo:#f9f9f9;
+    --cor-branca:#fff;
+    --cor-preta:#000;
+    --cor-cinza:#444;
+    --cor-cinza-clara:#ccc;
+    --fs-xxl:2.4rem;--fs-xl:2rem;--fs-lg:1.5rem;--fs-md:1.1rem;--fs-sm:0.9rem;
+    --esp-1:8px;--esp-2:16px;--esp-3:24px;--esp-4:32px;--esp-5:48px;--esp-6:64px;
+    --radius:15px;
+    --shadow-1:0 2px 6px rgba(0,0,0,.3);
+    --shadow-2:0 4px 15px rgba(0,0,0,.2);
+  }
 
-    /* ======== IMAGEM DE FUNDO ======== */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('cachorros-4.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      filter: brightness(0.6);
-      opacity: 0.9;
-      z-index: -1;
-    }
+  /* ======== ESTILO GERAL ======== */
+  body {
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    color:#222;
+  }
 
-    /* ======== CABEÇALHO ======== */
-    header {
-      background: rgba(0, 0, 0, 0.8);
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-    }
+  /* ======== IMAGEM DE FUNDO ======== */
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image:url('cachorros-4.jpg');
+    background-size:cover;
+    background-position:center 30%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    filter:brightness(0.6);
+    opacity:0.9;
+    z-index:-1;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 1px;
-    }
+  /* ======== CABEÇALHO ======== */
+  header {
+    background:rgba(0,0,0,0.8);
+    color:#fff;
+    text-align:center;
+    padding:20px 0;
+    position:fixed;
+    top:0;width:100%;
+    z-index:10;
+    box-shadow:var(--shadow-1);
+  }
+  header h1{margin:0;font-size:28px;letter-spacing:1px;}
 
-    /* ======== MENU ======== */
-    nav {
-      margin-top: 10px;
-    }
+  /* ======== MENU ======== */
+  nav{margin-top:10px;}
+  nav a{
+    color:#fff;text-decoration:none;margin:0 15px;
+    font-weight:600;transition:color 0.3s;
+  }
+  nav a:hover{color:var(--cor-primaria);}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+  /* ======== CONTEÚDO ======== */
+  main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:120px 20px 50px;
+  }
 
-    nav a:hover {
-      color: #ff914d;
-    }
+  .conteudo{
+    background:rgba(255,255,255,0.85);
+    border-radius:15px;
+    box-shadow:var(--shadow-2);
+    padding:30px;
+    max-width:900px;
+    text-align:center;
+  }
 
-    /* ======== CONTEÚDO ======== */
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 120px 20px 50px; /* espaço pro header fixo */
-    }
+  .conteudo h2{
+    font-size:26px;
+    color:var(--cor-primaria);
+    border-bottom:2px solid var(--cor-primaria);
+    display:inline-block;
+    padding-bottom:8px;
+    margin-bottom:20px;
+  }
 
-    .conteudo {
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      padding: 30px;
-      max-width: 900px;
-      text-align: center;
-    }
+  .conteudo p{
+    font-size:18px;
+    line-height:1.6;
+    color:#222;
+    margin-bottom:25px;
+  }
 
-    .conteudo h2 {
-      font-size: 26px;
-      color: #ff914d;
-      border-bottom: 2px solid #ff914d;
-      display: inline-block;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-    }
+  /* ======== SEÇÃO DE CARDS (Tópico 2 – GRID) ======== */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:var(--esp-3);
+    margin-top:var(--esp-5);
+  }
 
-    .conteudo p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #222;
-      margin-bottom: 25px;
-    }
+  .card{
+    background:rgba(255,255,255,0.9);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-1);
+    padding:var(--esp-3);
+    transition:transform 0.3s,box-shadow 0.3s;
+  }
 
-    /* ======== RODAPÉ ======== */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      font-size: 14px;
-      margin-top: auto;
-      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
-    }
+  .card:hover{
+    transform:scale(1.03);
+    box-shadow:var(--shadow-2);
+  }
+
+  .card h3{
+    color:var(--cor-primaria);
+    margin-bottom:10px;
+  }
+
+  .card p{
+    font-size:16px;
+    color:#333;
+  }
+
+  /* ======== BOTÕES (Tópico 4 – COMPONENTES) ======== */
+  .btn{
+    background:var(--cor-primaria);
+    color:var(--cor-branca);
+    border:none;
+    border-radius:8px;
+    padding:10px 16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.2s;
+  }
+  .btn:hover{background:var(--cor-primaria-escura);}
+  .btn:focus{outline:3px solid var(--cor-secundaria);}
+  .btn:disabled{background:var(--cor-cinza);cursor:not-allowed;opacity:0.7;}
+
+  /* ======== RODAPÉ ======== */
+  footer{
+    background-color:#333;
+    color:white;
+    text-align:center;
+    padding:15px 0;
+    font-size:14px;
+    margin-top:auto;
+    box-shadow:0 -2px 8px rgba(0,0,0,0.3);
+  }
+
+  /* ======== BREAKPOINTS (Tópico 2) ======== */
+  @media(max-width:1200px){.conteudo{padding:var(--esp-4);}}
+  @media(max-width:992px){h1{font-size:var(--fs-xl);}}
+  @media(max-width:768px){main{padding:110px var(--esp-2) 50px;}}
+  @media(max-width:576px){h2{font-size:1.4rem;}}
+  @media(max-width:400px){p{font-size:var(--fs-sm);}}
   </style>
 </head>
 
@@ -135,14 +189,25 @@
       <h2>Nosso Projeto</h2>
       <p>A ONG Alegria desenvolve projetos voltados ao resgate, cuidado e adoção de cães em situação de rua, proporcionando um ambiente seguro e amoroso.</p>
 
-      <h2>Resgate e Acolhimento</h2>
-      <p>Realizamos o resgate de cães em situação de risco, oferecendo cuidados veterinários, alimentação adequada e um lar temporário até encontrarem uma família definitiva.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Resgate e Acolhimento</h3>
+          <p>Resgatamos cães em situação de risco, oferecendo cuidados veterinários e alimentação adequada até encontrarem um lar definitivo.</p>
+          <button class="btn">Saiba mais</button>
+        </div>
 
-      <h2>Campanhas de Adoção</h2>
-      <p>Organizamos eventos e campanhas para promover a adoção dos cães sob nossos cuidados, buscando lares amorosos e responsáveis para cada um deles.</p>
+        <div class="card">
+          <h3>Campanhas de Adoção</h3>
+          <p>Promovemos eventos e campanhas de adoção para conectar cães a famílias responsáveis.</p>
+          <button class="btn" disabled>Em breve</button>
+        </div>
 
-      <h2>Educação e Conscientização</h2>
-      <p>Desenvolvemos programas educativos para a comunidade, visando aumentar a conscientização sobre os direitos dos animais e a importância da adoção responsável.</p>
+        <div class="card">
+          <h3>Educação e Conscientização</h3>
+          <p>Realizamos palestras e oficinas sobre direitos dos animais e adoção responsável.</p>
+          <button class="btn">Participar</button>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -152,5 +217,3 @@
   </footer>
 </body>
 </html>
-
-

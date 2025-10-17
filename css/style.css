@@ -163,5 +163,90 @@ main {
   left: 55%; /* empurra a imagem*/
   transform: translateX(-50%);
 }
+/* ======= TÓPICO 2 – LAYOUT RESPONSIVO (GRID + FLEXBOX) ======= */
+
+/* GRID 12 COLUNAS BASE */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--esp-2);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Classes utilitárias de colunas */
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* EXEMPLO DE SEÇÃO COM GRID */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--esp-3);
+  padding: var(--esp-5);
+}
+
+/* FLEXBOX INTERNO – centralização padrão */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======= BREAKPOINTS (5) ======= */
+@media (max-width: 1200px) {
+  body { font-size: 95%; }
+}
+
+@media (max-width: 992px) {
+  header h1 { font-size: 1.8rem; }
+}
+
+@media (max-width: 768px) {
+  nav a { margin: 0 var(--esp-1); font-size: var(--fs-sm); }
+  .container { padding: var(--esp-3); }
+  .imagens-baixo img, .imagens-inferiores img { width: 200px; }
+}
+
+@media (max-width: 576px) {
+  .grid-container { grid-template-columns: repeat(6, 1fr); }
+  header { padding: var(--esp-2) 0; }
+}
+
+@media (max-width: 400px) {
+  h1 { font-size: 1.4rem; }
+  p  { font-size: var(--fs-sm); }
+}
+/* ======= BOTÕES ======= */
+.btn {
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--esp-2) var(--esp-3);
+  cursor: pointer;
+  font-size: var(--fs-md);
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover { background: var(--cor-primaria-escura); }
+.btn:focus { outline: 3px solid var(--cor-secundaria); }
+.btn:active { transform: scale(0.97); }
+.btn:disabled {
+  background: var(--cor-cinza);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
 
 
